@@ -51,11 +51,10 @@ def create_folders():
 def get_last_recorded_date() -> date:
     files = os.listdir(days_path)
     files.sort()
-    log(files)
     if len(files) == 0:
         return date.today() - timedelta(days=1)
     last_date = files[0].split(".")[0]
-    log(last_date)
+    log(f"Will be starting at: {last_date}")
     return datetime.datetime.fromisoformat(last_date)
 
 
