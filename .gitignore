@@ -4,3 +4,6 @@ days/*
 
 # ide settings
 .idea
+
+# logs
+logging
