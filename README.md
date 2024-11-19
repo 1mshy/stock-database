@@ -2,6 +2,8 @@
 
 Python script that uses the free polygon api to get information about all stocks on all days
 
+To get personal api key, go to https://polygon.io/ and sign up for the free plan
+
 Create a file named '.env' and add the following equality with the api key after the equals sign (no quotes needed):
 
 ```dotenv
