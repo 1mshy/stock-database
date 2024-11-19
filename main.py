@@ -30,10 +30,10 @@ def fetch_day(day: str):
     request_link = f"https://api.polygon.io/v2/aggs/grouped/locale/us/market/stocks/{day}?adjusted=true&include_otc=true&apiKey={api_key}"
     response = requests.get(request_link)
     log(f"Request link: {request_link}")
-    log(f"code: {response.status_code}")
+    log(f"Finished with code: {response.status_code} - {response}")
     with open(f"{days_path}/{day}.json", "w") as file:
         file.write(json.dumps(response.json(), separators=(',', ':'), indent=None, sort_keys=True))
-    log(f"File saved to {days_path}/{day}.json")
+    log(f"Json data saved to {days_path}/{day}.json")
 
 
 def create_folders():
@@ -53,7 +53,7 @@ def get_last_recorded_date() -> date:
     files.sort()
     log(files)
     if len(files) == 0:
-        return date.today()
+        return date.today() - timedelta(days=1)
     last_date = files[0].split(".")[0]
     log(last_date)
     return datetime.datetime.fromisoformat(last_date)

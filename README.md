@@ -8,11 +8,16 @@ API_KEY=
 Install all python dependencies:
 
 ```bash
-pip install dotenv requests logging mylib
+pip install python-dotenv requests logging
+# If the above command does not work try running
+pip3 install python-dotenv requests logging
+
 ```
 
 Run program using:
 
 ```bash
 python main.py
+# If the above command does not work try running
+python3 main.py
 ```
