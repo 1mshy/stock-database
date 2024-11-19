@@ -1,0 +1,6 @@
+# API TOKENS
+.env
+days/*
+
+# ide settings
+.idea
