@@ -71,6 +71,6 @@ def log(anything):
 
 if __name__ == '__main__':
     create_folders()
-    main()
     setup_logging()
+    main()
     logger.info('Finished')
