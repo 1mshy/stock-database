@@ -1,12 +1,12 @@
 import datetime
 import json
 import time
-
 import requests
+import logging
 import os
+
 from dotenv import load_dotenv
 from datetime import timedelta, date
-import logging
 
 logger = logging.getLogger(__name__)
 load_dotenv()
